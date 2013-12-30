@@ -102,7 +102,7 @@
         <!-- The transport connectors ActiveMQ will listen to -->
         <transportConnectors>
             <transportConnector name="openwire" uri="${activemq.url}"/>
-            <transportConnector name="stomp" uri="stomp://localhost:61613"/>
+            <transportConnector name="stomp" uri="stomp://OPENSHIFT_DIY_IP:61613"/>
         </transportConnectors>
 
     </broker>
@@ -127,7 +127,7 @@
 
     <service ref="pooledConnectionFactory" interface="javax.jms.ConnectionFactory">
         <service-properties>
-            <entry key="name" value="localhost"/>
+            <entry key="name" value="OPENSHIFT_DIY_IP"/>
         </service-properties>
     </service>
 
